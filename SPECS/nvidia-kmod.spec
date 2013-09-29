@@ -22,6 +22,7 @@ Source0:       nvidia-kmod-data-%{version}.tar.xz
 
 Source11:       nvidia-kmodtool-excludekernel-filterfile
 Patch0:         3.10_kernel.patch
+Patch1:         kernel_v3.11.patch
 
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -49,6 +50,7 @@ for arch in x86_64 i686 armv7hl
 do
 pushd nvidiapkg-${arch}
 %patch0 -p1
+%patch1 -p1
 popd
 done
 
