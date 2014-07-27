@@ -1,0 +1,11 @@
+--- mumble-1.2.3/src/mumble/TextToSpeech_unix.cpp.orig	2013-08-19 22:11:50.282140212 +0100
++++ mumble-1.2.3/src/mumble/TextToSpeech_unix.cpp	2013-08-19 22:12:24.471565741 +0100
+@@ -31,7 +31,7 @@
+ #include "TextToSpeech.h"
+ #include "Global.h"
+ #ifdef USE_SPEECHD
+-#include <libspeechd.h>
++#include <speech-dispatcher/libspeechd.h>
+ #endif
+ 
+ class TextToSpeechPrivate {

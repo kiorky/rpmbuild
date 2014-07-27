@@ -1,0 +1,12 @@
+[Unit]
+Description=Murmurd - VoIP Server
+After=network.target mysqld.service
+
+[Service]
+User=mumble-server
+Type=forking
+PIDFile=/run/mumble-server/mumble-server.pid
+ExecStart=/usr/sbin/murmurd -ini /etc/mumble-server.ini
+
+[Install]
+WantedBy=multi-user.target

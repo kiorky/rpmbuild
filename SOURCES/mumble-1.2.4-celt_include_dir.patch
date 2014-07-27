@@ -1,0 +1,17 @@
+diff -uNr mumble-1.2.4.old/src/mumble/mumble.pro mumble-1.2.4/src/mumble/mumble.pro
+--- mumble-1.2.4.old/src/mumble/mumble.pro	2013-06-01 23:16:32.000000000 +0200
++++ mumble-1.2.4/src/mumble/mumble.pro	2013-08-08 01:25:00.074767780 +0200
+@@ -67,11 +67,11 @@
+   LIBS *= -lcelt -lsbcelt
+   DEFINES *= SBCELT_PREFIX_API SBCELT_COMPAT_API USE_SBCELT
+ } else {
+-  unix:!CONFIG(bundled-celt):system(pkg-config --atleast-version=0.7.0 celt) {
++  unix:!CONFIG(bundled-celt):system(pkg-config --atleast-version=0.7.0 celt071) {
+     CONFIG	*= no-bundled-celt
+   }
+   CONFIG(no-bundled-celt) {
+-    INCLUDEPATH	*= /usr/include/celt
++    INCLUDEPATH	*= /usr/include/celt071
+   }
+   !CONFIG(no-bundled-celt) {
+     INCLUDEPATH	*= ../../celt-0.7.0-src/libcelt

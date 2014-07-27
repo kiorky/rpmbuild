@@ -1,0 +1,14 @@
+diff -Nur mumble-1.2.5/src/murmur/murmur.pro mumble-1.2.5.nes/src/murmur/murmur.pro
+--- mumble-1.2.5/src/murmur/murmur.pro	2014-02-01 00:01:49.000000000 +0100
++++ mumble-1.2.5.nes/src/murmur/murmur.pro	2014-04-02 08:54:08.049455045 +0200
+@@ -73,8 +73,8 @@
+ 	slice.output = ${QMAKE_FILE_BASE}.cpp
+ 	win32 {
+ 		slice.commands = slice2cpp --checksum -I\"$$ICE_PATH/slice\" ${QMAKE_FILE_NAME}
+-	} else {
+-		slice.commands = slice2cpp --checksum -I/usr/local/share/Ice -I/usr/share/Ice/slice -I/usr/share/slice -I/usr/share/Ice-3.4.1/slice/ -I/usr/share/Ice-3.3.1/slice/ -I/usr/share/Ice-3.4.2/slice/ ${QMAKE_FILE_NAME}
++	} else { 
++		slice.commands = slice2cpp --checksum -I/usr/local/share/Ice -I/usr/share/Ice/slice -I/usr/share/slice -I/usr/share/Ice-3.5.1/slice/ -I/usr/share/Ice-3.4.1/slice/ -I/usr/share/Ice-3.3.1/slice/ -I/usr/share/Ice-3.4.2/slice/ -I/usr/share/Ice-3.5.0/slice/ ${QMAKE_FILE_NAME}
+ 	}
+ 	slice.input = SLICEFILES
+ 	slice.CONFIG *= no_link explicit_dependencies

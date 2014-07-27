@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Mumble
+GenericName=Mumble
+Comment=Voice chat application
+Exec=mumble
+Icon=mumble
+Terminal=false
+Type=Application
+Categories=Network;Chat;
